@@ -38,7 +38,7 @@ class MoviesList extends React.Component {
   handleAdding = (title, overview) => {
     const newMovie = { title: title, overview: overview };
     const newList = [newMovie, ...this.state.moviesList];
-    this.setState({ moviesList: newList });
+    this.setState({ moviesList: newList, originalList: newList });
   };
 
   handleChange = (event) => {
